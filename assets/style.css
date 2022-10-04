@@ -1,0 +1,18 @@
+header {
+    background-color: aquamarine;
+    display:flex;
+    justify-content: flex-end;
+    justify-content:space-between
+}
+
+.container {
+    border: 2px;
+    border-style: dotted;
+}
+
+li {
+    background-color: aqua;
+    padding: 4px;
+}
+
+
