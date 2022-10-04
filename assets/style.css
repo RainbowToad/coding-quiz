@@ -5,9 +5,18 @@ header {
     justify-content:space-between
 }
 
+#start-btn {
+    font-size:2rem;
+}
+
+main {
+    display:flex;
+    justify-content: center;
+}
 .container {
     border: 2px;
     border-style: dotted;
+    
 }
 
 li {
