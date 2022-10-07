@@ -43,6 +43,7 @@ function renderQuestion(){
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
+    
 }
 
 
@@ -73,10 +74,13 @@ function checkAnswer(answer) {
         //answer is correct
         //change background green
         answerIsCorrect();
+        console.log("Correct")
+        
     }else{
         //answer is wrong
         //change background red
         answerIsWrong();
+        console.log("wrong")
     }
     if (runningQuestion < lastQuestion){
         runningQuestion++;
@@ -86,16 +90,30 @@ function checkAnswer(answer) {
         quiz.style.display = "none";
         scoreDiv.style.display = "block";
     }
-    
+ 
 }
+
+var correct = document.getElementById("correct");
+var incorrect = document.getElementById("incorrect");
+
+var timeOut = setTimeout(clearAnswer, 5000);
+
+function clearAnswer() {
+    correct.style.display = "none";
+}
+
 function answerIsCorrect() {
-    //document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
-    console.log("Correct");
+    correct.style.display = "block";
+    clearAnswer
 }
 
 function answerIsWrong() {
-    //document.getElementById(runningQuestion).style.backgroundColor = "#f00";
+    
     // subtract 10 seconds from timer
-    console.log("wrong");
+    incorrect.style.display = "block"
+
 }
+
+
+
 

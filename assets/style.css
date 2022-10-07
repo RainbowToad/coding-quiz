@@ -24,4 +24,13 @@ li {
     padding: 4px;
 }
 
+#correct {
+    color: green;
+    background-color: black;
+}
+
+#incorrect {
+    color: red;
+    background-color: black;
+}
 
