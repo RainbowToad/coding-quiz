@@ -74,6 +74,7 @@ function checkAnswer(answer) {
         //answer is correct
         //change background green
         answerIsCorrect();
+        
         console.log("Correct")
         
     }else{
@@ -96,21 +97,23 @@ function checkAnswer(answer) {
 var correct = document.getElementById("correct");
 var incorrect = document.getElementById("incorrect");
 
-var timeOut = setTimeout(clearAnswer, 5000);
+
 
 function clearAnswer() {
     correct.style.display = "none";
+    incorrect.style.display = "none";
 }
 
 function answerIsCorrect() {
     correct.style.display = "block";
-    clearAnswer
+    setTimeout(clearAnswer, 2000);
 }
 
 function answerIsWrong() {
     
     // subtract 10 seconds from timer
     incorrect.style.display = "block"
+    setTimeout(clearAnswer, 2000);
 
 }
 
