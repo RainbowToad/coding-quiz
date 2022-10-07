@@ -4,7 +4,7 @@ var choiceA = document.getElementById("A");
 var choiceB = document.getElementById("B");
 var choiceC = document.getElementById("C");
 var choiceD = document.getElementById("D");
-
+var scoreDiv = document.getElementById("scoreContainer");
 //Create questions
 var questions = [
     {
@@ -81,6 +81,10 @@ function checkAnswer(answer) {
     if (runningQuestion < lastQuestion){
         runningQuestion++;
         renderQuestion();
+    }else{
+        //end quiz and display final page
+        quiz.style.display = "none";
+        scoreDiv.style.display = "block";
     }
     
 }
@@ -91,6 +95,7 @@ function answerIsCorrect() {
 
 function answerIsWrong() {
     //document.getElementById(runningQuestion).style.backgroundColor = "#f00";
+    // subtract 10 seconds from timer
     console.log("wrong");
 }
 
