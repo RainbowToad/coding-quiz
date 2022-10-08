@@ -5,6 +5,7 @@ var choiceB = document.getElementById("B");
 var choiceC = document.getElementById("C");
 var choiceD = document.getElementById("D");
 var scoreDiv = document.getElementById("scoreContainer");
+var scoreText = document.getElementById("scoreResult");
 //Create questions
 var questions = [
     {
@@ -59,13 +60,15 @@ quizStart.addEventListener("click", function() {
 
 var timeEl = document.querySelector("#timer");
 
-var secondsLeft = 80
+var secondsLeft = 40
 
 function setTime() {
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timeEl.textContent = "Time remaining " + secondsLeft;
-
+        if (secondsLeft <= 0) {
+            clearInterval(timerInterval);
+        }
     }, 1000);
 }
 
@@ -86,6 +89,8 @@ function checkAnswer(answer) {
         //end quiz and display final page
         quiz.style.display = "none";
         scoreDiv.style.display = "block";
+        scoreText.style.display = "block";
+        displayScore();
     }
  
 }
@@ -114,6 +119,9 @@ function answerIsWrong() {
 
 }
 
-
+// Display score
+function displayScore() {
+    document.getElementById("scoreResult").innerHTML = secondsLeft;
+}
 
 
