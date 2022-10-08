@@ -36,6 +36,22 @@ p {
     font-size:1.5rem;
 }
 
+#container2 {
+    display:flex;
+    justify-content:center;
+    justify-content:space-between;
+    font-size:2rem;
+    padding:2rem;
+}
+
+li {
+    padding-top: 2rem;
+}
+
+#try-again {
+    padding-bottom: 2rem;
+}
+
 #correct {
     color: green;
     background-color: black;
@@ -51,8 +67,4 @@ p {
     color: black;
 }
 
-#container2 {
-    display:flex;
-    justify-content:center;
-}
 
