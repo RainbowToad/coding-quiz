@@ -19,11 +19,6 @@ main {
     
 }
 
-li {
-    background-color: aqua;
-    padding: 4px;
-}
-
 #correct {
     color: green;
     background-color: black;
@@ -32,5 +27,15 @@ li {
 #incorrect {
     color: red;
     background-color: black;
+}
+
+#link {
+    font-size: 3rem;
+    color: black;
+}
+
+#container2 {
+    display:flex;
+    justify-content:center;
 }
 

@@ -71,15 +71,10 @@ function setTime() {
 
 function checkAnswer(answer) {
     if (answer == questions[runningQuestion].correct) {
-        //answer is correct
-        //change background green
         answerIsCorrect();
-        
         console.log("Correct")
         
     }else{
-        //answer is wrong
-        //change background red
         answerIsWrong();
         console.log("wrong")
     }
@@ -94,6 +89,7 @@ function checkAnswer(answer) {
  
 }
 
+// Create variables and functions to show user when they are correct and set timeout for it to clear
 var correct = document.getElementById("correct");
 var incorrect = document.getElementById("incorrect");
 
