@@ -77,6 +77,7 @@ function checkAnswer(answer) {
     }else{
         answerIsWrong();
         console.log("wrong")
+        secondsLeft = secondsLeft - 10;
     }
     if (runningQuestion < lastQuestion){
         runningQuestion++;
