@@ -11,26 +11,26 @@ var scoreText = document.getElementById("scoreResult");
 //Create questions as arrays
 var questions = [
     {
-        question : "What is my name?",
-        choiceA : "Correct",
-        choiceB : "Wrong",
-        choiceC : "Wrong",
-        choiceD : "Wrong",
+        question : "What is the correct documentation for a function in Javascript?",
+        choiceA : "1. function()",
+        choiceB : "2. function[]",
+        choiceC : "3. function{}",
+        choiceD : "4. What's a function?",
         correct : "A"
     }, {
-        question : "Why are things this way?",
-        choiceA : "Correct",
-        choiceB : "Wrong",
-        choiceC : "Wrong",
-        choiceD : "Wrong",
-        correct : "A"
+        question : "When selecting a class in CSS you use what syntax?",
+        choiceA : "1. #class",
+        choiceB : "2. .class",
+        choiceC : "3. !class",
+        choiceD : "4. What's a class?",
+        correct : "B"
     }, {
-        question : "Who literally let the dogs out?",
-        choiceA : "Correct",
-        choiceB : "Wrong",
-        choiceC : "Wrong",
-        choiceD : "Wrong",
-        correct : "A"
+        question : "The end of every Javascript phrase should end with a(n)?",
+        choiceA : "1. What is Javascript?",
+        choiceB : "2. exclamation point",
+        choiceC : "3. pound sign",
+        choiceD : "4. semicolon",
+        correct : "D"
     }
 ];
 
@@ -122,13 +122,13 @@ function answerIsWrong() {
 
 // Display score
 function displayScore() {
-    document.getElementById("scoreResult").innerHTML = secondsLeft;
+    document.getElementById("scoreResult").innerHTML = "Your Score " + secondsLeft;
     localStorage.setItem("score", secondsLeft)
 }
 
-var userName = document.querySelector("#uName").value
+var userName = document.getElementById("uName");
 
-localStorage.setItem ("name", userName);
+localStorage.setItem("name", userName);
 console.log(userName);
 
 
