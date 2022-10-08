@@ -6,7 +6,9 @@ var choiceC = document.getElementById("C");
 var choiceD = document.getElementById("D");
 var scoreDiv = document.getElementById("scoreContainer");
 var scoreText = document.getElementById("scoreResult");
-//Create questions
+
+
+//Create questions as arrays
 var questions = [
     {
         question : "What is my name?",
@@ -32,7 +34,7 @@ var questions = [
     }
 ];
 
-//Render questions
+//Render questions with function
 var lastQuestion = questions.length - 1;
 var runningQuestion = 0;
 
@@ -50,6 +52,8 @@ function renderQuestion(){
 
 var quizStart = document.querySelector("#start-btn")
 var btn = document.getElementById("start-btn");
+var timeEl = document.querySelector("#timer");
+var secondsLeft = 40
 
 quizStart.addEventListener("click", function() {
     setTime();
@@ -57,10 +61,6 @@ quizStart.addEventListener("click", function() {
     renderQuestion();
     quiz.style.display = "block";
 })
-
-var timeEl = document.querySelector("#timer");
-
-var secondsLeft = 40
 
 function setTime() {
     var timerInterval = setInterval(function() {
@@ -92,6 +92,7 @@ function checkAnswer(answer) {
         scoreText.style.display = "block";
         displayScore();
     }
+    
  
 }
 
@@ -122,6 +123,12 @@ function answerIsWrong() {
 // Display score
 function displayScore() {
     document.getElementById("scoreResult").innerHTML = secondsLeft;
+    localStorage.setItem("score", secondsLeft)
 }
+
+var userName = document.querySelector("#uName").value
+
+localStorage.setItem ("name", userName);
+console.log(userName);
 
 
