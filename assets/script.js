@@ -53,7 +53,9 @@ function renderQuestion(){
 var quizStart = document.querySelector("#start-btn")
 var btn = document.getElementById("start-btn");
 var timeEl = document.querySelector("#timer");
-var secondsLeft = 40
+var secondsLeft = 80
+
+// Start quiz and timer with click
 
 quizStart.addEventListener("click", function() {
     setTime();
@@ -72,15 +74,14 @@ function setTime() {
     }, 1000);
 }
 
+// Function to progress if write or wrong
 function checkAnswer(answer) {
     if (answer == questions[runningQuestion].correct) {
         answerIsCorrect();
-        console.log("Correct")
         
     }else{
         answerIsWrong();
-        console.log("wrong")
-        secondsLeft = secondsLeft - 10;
+        
     }
     if (runningQuestion < lastQuestion){
         runningQuestion++;
@@ -113,22 +114,35 @@ function answerIsCorrect() {
 }
 
 function answerIsWrong() {
-    
-    // subtract 10 seconds from timer
     incorrect.style.display = "block"
     setTimeout(clearAnswer, 2000);
+    secondsLeft = secondsLeft - 10;
 
 }
 
-// Display score
+// Display score and set ot local storage
 function displayScore() {
     document.getElementById("scoreResult").innerHTML = "Your Score " + secondsLeft;
     localStorage.setItem("score", secondsLeft)
 }
 
-var userName = document.getElementById("uName");
+// Store input name to local storage
+function submit(){
+    var userName = document.getElementById("uName");
+    localStorage.setItem("name", userName);
+    console.log(userName);
+}
 
-localStorage.setItem("name", userName);
-console.log(userName);
+var subBtn = getElementById("scoreContainer");
+subBtn.addEventListener("click", submit);
+
+var output = document.getElementById("list");
+
+function setScore() {
+    output.innerHTML = localStorage.getItem("score");
+}
+console.log(localStorage.getItem("score"));
+setScore();
+
 
 
