@@ -92,6 +92,7 @@ function checkAnswer(answer) {
         scoreDiv.style.display = "block";
         scoreText.style.display = "block";
         displayScore();
+
     }
     
  
@@ -130,10 +131,11 @@ function displayScore() {
 function submit(){
     var userName = document.getElementById("uName");
     localStorage.setItem("name", userName);
-    console.log(userName);
 }
+submit();
 
-var subBtn = getElementById("uName");
+
+var subBtn = document.getElementById("uName");
 subBtn.addEventListener("click", submit);
 
 
