@@ -133,16 +133,10 @@ function submit(){
     console.log(userName);
 }
 
-var subBtn = getElementById("scoreContainer");
+var subBtn = getElementById("uName");
 subBtn.addEventListener("click", submit);
 
-var output = document.getElementById("list");
 
-function setScore() {
-    output.innerHTML = localStorage.getItem("score");
-}
-console.log(localStorage.getItem("score"));
-setScore();
 
 
 
