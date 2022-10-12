@@ -63,6 +63,7 @@ quizStart.addEventListener("click", function() {
     renderQuestion();
     quiz.style.display = "block";
 })
+ 
 
 function setTime() {
     var timerInterval = setInterval(function() {
@@ -130,13 +131,12 @@ function displayScore() {
 // Store input name to local storage
 function submit(){
     var userName = document.getElementById("uName");
-    localStorage.setItem("name", userName);
+    localStorage.setItem("name", userName.value);
 }
-submit();
+
+scoreDiv.addEventListener("click", submit);
 
 
-var subBtn = document.getElementById("uName");
-subBtn.addEventListener("click", submit);
 
 
 
