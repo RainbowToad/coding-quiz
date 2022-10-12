@@ -71,6 +71,11 @@ function setTime() {
         timeEl.textContent = "Time remaining " + secondsLeft;
         if (secondsLeft <= 0) {
             clearInterval(timerInterval);
+            //Stop game if timer hits zero
+            quiz.style.display = "none";
+            scoreDiv.style.display = "block";
+            scoreText.style.display = "block";
+            displayScore();
         }
     }, 1000);
 }
