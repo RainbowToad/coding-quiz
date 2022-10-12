@@ -8,5 +8,6 @@ This project was used for me to practice my continued learning with Javascript a
 
 ## Usage
 Active URL: https://rainbowtoad.github.io/coding-quiz/
+
 Screenshot: ![127 0 0 1_5500_index html (1)](https://user-images.githubusercontent.com/111533301/195179273-b29e158c-b5fb-492e-a514-502c3b6ee302.png)
 
